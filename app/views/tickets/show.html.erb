@@ -1,5 +1,6 @@
 <div id='ticket'>
   <h2><%= @ticket.title %></h2>
+  <br><small>Created by <%= @ticket.user.email %></small>
   <%= simple_format(@ticket.description) %>
 </div>
 <%= link_to "Edit Ticket", [:edit, @project, @ticket] %>
