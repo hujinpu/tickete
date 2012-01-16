@@ -1,14 +1,13 @@
 Tickete::Application.routes.draw do
 
-  namespace :admin do
-    resources :users
-  end
-
-  get "users/index"
-
   devise_for :users
 
   root :to => "projects#index"
+
+  namespace :admin do
+    root :to => "base#index"
+    resources :users
+  end
 
   resources :projects do
     resources :tickets
