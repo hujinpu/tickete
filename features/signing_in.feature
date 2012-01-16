@@ -17,4 +17,4 @@ Feature: Signing in
     Given there are the following users:
       | email             | password |
       | user@ticketee.com | password |
-    And I am signed in as them
+    And I am signed in as "user@ticketee.com"
