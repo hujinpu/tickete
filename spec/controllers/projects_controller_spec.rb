@@ -30,4 +30,11 @@ describe ProjectsController do
     flash[:alert].should eql(message)
   end
 
+  it "cannot access the show action" do
+    sign_in(:user, user)
+    get :show, :id => project.id
+    response.should redirect_to(projects_path)
+    flash[:alert].should eql("The project you were looking for could not be found.")
+  end
+
 end
