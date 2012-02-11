@@ -56,9 +56,6 @@ ActiveRecord::Schema.define(:version => 20120210055043) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.boolean  "admin",                                 :default => false
-    t.string   "twitter_id"
-    t.string   "twitter_screen_name"
-    t.string   "twitter_display_name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

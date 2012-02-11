@@ -11,6 +11,8 @@ Feature: Viewing projects
     And there is a project called "TextMate 2"
     And "user@ticketee.com" can view the "TextMate 2" project
 
+    And there is a project called "Internet Explorer"
+
   Scenario: Listing all projects
     And I am on the homepage
     Then I should not see "Internet Explorer"
