@@ -2,6 +2,7 @@ Feature: Deleting tickets
   In order to remove tickets
   As a user
   I want to press a button and make them disappear
+
   Background:
     Given there are the following users:
       | email             | password |
@@ -11,11 +12,12 @@ Feature: Deleting tickets
     And "user@ticketee.com" can view the "TextMate 2" project
     And "user@ticketee.com" can delete tickets in the "TextMate 2" project
     And "user@ticketee.com" has created a ticket for this project:
-      | title           | description                   |
-      |  Make it shiny! | Gradients! Starbursts! Oh my! |
+      | title          | description                   |
+      | Make it shiny! | Gradients! Starbursts! Oh my! |
     Given I am on the homepage
     When I follow "TextMate 2"
     And I follow "Make it shiny!"
+
   Scenario: Deleting a ticket
     When I follow "Delete Ticket"
     Then I should see "Ticket has been deleted."
